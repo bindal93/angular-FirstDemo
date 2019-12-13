@@ -1,3 +1,8 @@
-<p>
+<h2>
   Hello {{ courseName }}
-</p>
+</h2>
+<br/>
+<button (click)="changeName()">Change Course Name</button>
+<br/>
+<input #cName placeholder="Change course name with this input">
+<button (click)="changeNameWithThis(cName.value)">Change Course Name</button>
