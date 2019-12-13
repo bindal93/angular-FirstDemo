@@ -6,3 +6,7 @@
 <br/>
 <input #cName placeholder="Change course name with this input">
 <button (click)="changeNameWithThis(cName.value)">Change Course Name</button>
+
+
+<input type="text" [(ngModel)]="courseName"> <br/>
+<div>Hello , {{ courseName }}</div>
