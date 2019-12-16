@@ -47,7 +47,7 @@ export class NgIfSimpleComponent implements OnInit {
 
   birthYear: number = 2019;
   displayFlag: boolean = false;
-
+  nameSalutaion: string = "Angular";
   product: Object = {
     productCode: "PROD_P001",
     productName: "Laptop",
