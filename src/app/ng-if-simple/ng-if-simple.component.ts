@@ -45,9 +45,17 @@ export class NgIfSimpleComponent implements OnInit {
   ];
   selectedValue: string = "One";
 
-  birthYear: number=2019;
-  displayFlag : boolean=false;
-  
+  birthYear: number = 2019;
+  displayFlag: boolean = false;
+
+  product: Object = {
+    productCode: "PROD_P001",
+    productName: "Laptop",
+    productPrice: 25000,
+    purchaseDate: "5/12/2017",
+    productTax: "0.1",
+    productRating: 4.53
+  };
 }
 class Movie {
   title: string;
