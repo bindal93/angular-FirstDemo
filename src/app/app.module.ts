@@ -7,6 +7,7 @@ import { HelloComponent } from "./hello/hello.component";
 import { HelloComponent2 } from "./hello2.component";
 import { NgIfSimpleComponent } from "./ng-if-simple/ng-if-simple.component";
 import { SalutationPipe } from './salutation.pipe';
+import { AppCoursesListComponent } from './app-courses-list/app-courses-list.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -15,7 +16,8 @@ import { SalutationPipe } from './salutation.pipe';
     HelloComponent,
     HelloComponent2,
     NgIfSimpleComponent,
-    SalutationPipe
+    SalutationPipe,
+    AppCoursesListComponent
   ],
   bootstrap: [AppComponent]
 })
