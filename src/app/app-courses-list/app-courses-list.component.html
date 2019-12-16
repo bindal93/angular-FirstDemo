@@ -1,14 +1,16 @@
 <table border="1" *ngIf="cName">
-  <thead>
-    <tr>
-      <th>Course ID</th>
-      <th>Course Name</th>
-    </tr>
-  </thead>
-  <tbody *ngFor="let c of courses">
-    <tr *ngIf="c.courseName == cName">
-      <td *ngIf="c.courseName == cName">{{c.courseId}}</td>
-      <td *ngIf="c.courseName == cName">{{c.courseName}}</td>
-    </tr>
-  </tbody>
+	<thead>
+		<tr>
+			<th>Course ID</th>
+			<th>Course Name</th>
+			<th>Action Taken</th>
+		</tr>
+	</thead>
+	<tbody *ngFor="let c of courses">
+		<tr *ngIf="c.courseName == cName">
+			<td>{{c.courseId}}</td>
+			<td>{{c.courseName}}</td>
+			<td><button (click)="register(c.courseName)">Register</button></td>
+		</tr>
+	</tbody>
 </table>

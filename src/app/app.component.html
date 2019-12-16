@@ -6,7 +6,8 @@
 <app-hello></app-hello>
 <hr>
 <app-ng-if-simple></app-ng-if-simple>
-<br><hr>
+<br>
+<hr>
 <h2> Course Details </h2>
 Select a course to view <select #cor (change)="cor.value">
     <option value="Node JS">Node JS</option>
@@ -14,4 +15,6 @@ Select a course to view <select #cor (change)="cor.value">
     <option value="Angular">Angular</option>
     <option value="React JS">React JS</option>
     </select><br/><br/>
-<app-courses-list [cName]="cor.value"></app-courses-list>
+<app-courses-list [cName]="cor.value" (onRegister)="courseReg($event)"></app-courses-list>
+
+{{message}}

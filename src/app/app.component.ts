@@ -7,4 +7,9 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   name: string = "Angular";
+  message: string;
+
+  courseReg(courseName: string) {
+    this.message = `Your registration for ${courseName} is successful`;
+  }
 }
