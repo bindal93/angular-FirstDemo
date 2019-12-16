@@ -44,6 +44,10 @@ export class NgIfSimpleComponent implements OnInit {
     { name: "Three", val: 3 }
   ];
   selectedValue: string = "One";
+
+  birthYear: number=2019;
+  displayFlag : boolean=false;
+  
 }
 class Movie {
   title: string;

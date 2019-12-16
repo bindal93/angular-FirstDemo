@@ -43,5 +43,12 @@ show = {{show}}
 	<div *ngSwitchCase="'One'">One is Pressed</div>
 	<div *ngSwitchCase="'Two'">Two is Selected</div>
 	<div *ngSwitchDefault>Default Option</div>
-</div> <br/>
+</div>
+<br/>
+<hr>
+
+<input type="number" #ageNumber placeholder="Enter your age" >
+<button (click)="displayFlag=true">Show me year</button>
+<div *ngIf="displayFlag">{{this.birthYear-ageNumber.value}}</div>
+<br/>
 <hr>
