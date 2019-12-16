@@ -52,3 +52,21 @@ show = {{show}}
 <div *ngIf="displayFlag">{{this.birthYear-ageNumber.value}}</div>
 <br/>
 <hr>
+
+{{ 66600 | currency }}
+<!-- will display $66,600.00  --> <br>
+{{ 66600 | currency : 'CAD' }}
+<!-- will display CAD$66,600.00  --> <br>
+{{ 66600 | currency :'INR' }}
+<!-- will display ?66,600.00 --> <br>
+{{ 66600 | currency :'INR' :'code' }}
+<!-- will display INR66,600.00 --> <br>
+{{ 66600 | currency :'INR' :'symbol' }}
+<!-- will display ?66,600.00 --> <br>
+{{ 66600 | currency :'INR' :'myOwnString' }}
+<!-- will display myOwnString66,600.00 --> <br>
+{{ 66600 | currency :'INR' :'code' :'6.2-3'}}
+<!-- will display INR066,600.00 --> <br>
+{{ 66600 | currency :'INR' :'symbol' :'1.3'}}
+<!-- will display ?66,600.000 --> <br>
+<hr>
