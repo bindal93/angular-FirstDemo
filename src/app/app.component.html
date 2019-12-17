@@ -34,3 +34,26 @@ Select a course to view <select #cor (change)="cor.value">
 <form #formRef = "ngForm" (ngSubmit) = "onSubmit()"> 
         <input class="form-control" name="controlname" [(ngModel)]="classVariable" #variable ="ngModel"/>{{variable.value}}
 </form>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form #bookingForm="ngForm" (ngSubmit)="temp=true">
+        <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="customerId" name="custId" placeholder="Customer Id">
+        </div>
+        <div class="form-group">
+          <input type="number" class="form-control" [(ngModel)]="noOfTravellers" name="travellerCount"
+            placeholder="No of Travellers">
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success">Book Tickets</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{{ bookingForm.value | json }}
+
+<br>
+<hr>
