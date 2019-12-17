@@ -30,3 +30,7 @@ Select a course to view <select #cor (change)="cor.value">
 <hr>
 <app-book></app-book>
 <hr>
+
+<form #formRef = "ngForm" (ngSubmit) = "onSubmit()"> 
+        <input class="form-control" name="controlname" [(ngModel)]="classVariable" #variable ="ngModel"/>{{variable.value}}
+</form>
