@@ -8,17 +8,22 @@ import { HelloComponent2 } from "./hello2.component";
 import { NgIfSimpleComponent } from "./ng-if-simple/ng-if-simple.component";
 import { SalutationPipe } from "./salutation.pipe";
 import { AppCoursesListComponent } from "./app-courses-list/app-courses-list.component";
+import { BookService } from "./book/book.service";
+import { HttpClientModule } from "@angular/common/http";
+import { BookComponent } from "./book/book.component";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   declarations: [
     AppComponent,
     HelloComponent,
     HelloComponent2,
     NgIfSimpleComponent,
     SalutationPipe,
-    AppCoursesListComponent
+    AppCoursesListComponent,
+    BookComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [BookService]
 })
 export class AppModule {}

@@ -8,7 +8,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 export class AppCoursesListComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+ ngOnInit(){
+   console.log('Inside child component : AppCoursesListComponent')
+ }
   courses = [
     { courseId: 1, courseName: "Node JS" },
     { courseId: 2, courseName: "Typescript" },
