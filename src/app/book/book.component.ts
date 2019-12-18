@@ -11,17 +11,36 @@ export class BookComponent implements OnInit {
   books: Book[];
   errorMessage: string;
   constructor(private bookService: BookService) {}
-
+  errorMessageB: string;
+  successMessageB: string;
   ngOnInit() {
     this.getBooks();
+
+    setTimeout(function(){  this.sendBooks(); }, 4000);
+   
   }
 
   getBooks() {
     this.bookService
       .getBooks()
       .subscribe(
-        books => ((this.books = books), console.log(books)),
+        books => ((this.books = books), books.map(i => console.log(i.name))),
         error => (this.errorMessage = <any>error)
       );
+    this.books.map(i => console.log(i.name));
+  }
+  sendBooks() {
+    debugger;
+    this.errorMessageB = null;
+    this.successMessageB = null;
+    this.books.map(i => console.log("name :: "+i.name));
+    this.bookService.sendData(this.books).subscribe(
+      success => {
+        this.successMessageB = success.message;
+      },
+      error => {
+        this.errorMessageB = error.error.message;
+      }
+    );
   }
 }

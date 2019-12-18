@@ -12,9 +12,24 @@ import { BookService } from "./book/book.service";
 import { HttpClientModule } from "@angular/common/http";
 import { BookComponent } from "./book/book.component";
 import { RegistrationFormComponent } from "./registration-form/registration-form.component";
+import { Routes, RouterModule } from "@angular/router";
+
+
+const routes: Routes = [
+  {
+    path: "bookList",
+    component: BookComponent
+  }
+];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule
+  ],
   declarations: [
     AppComponent,
     HelloComponent,

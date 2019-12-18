@@ -60,3 +60,14 @@ Select a course to view <select #cor (change)="cor.value">
 <app-registration-form></app-registration-form>
 <br>
 <hr>
+<div>
+    <h3>
+        Routing demo
+    </h3>
+    <a [routerLink]="['/bookList']">{{ name }}</a>
+    <br/>
+    <br/>
+    <router-outlet></router-outlet>
+</div>
+<br>
+<hr>
