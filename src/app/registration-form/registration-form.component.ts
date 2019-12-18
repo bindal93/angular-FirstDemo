@@ -15,18 +15,20 @@ registerForm: FormGroup;
       firstName: ['',[Validators.required]],
       lastName: ['', [Validators.required]],
       address: this.formBuilder.group({
-        street: [],
-        zip: [],
-        city: []
+        street: [''],
+        zip: [''],
+        city: ['']
       })
     });
   }
    testing(){
      debugger;
-     console.log("inside testing :: "+
+     alert("inside testing :: "+
      "firstName ::"+this.registerForm.get('firstName').value+
      "lastName ::"+this.registerForm.get('lastName').value+
-     "address ::"+this.registerForm.get('address').value)
+     "address ::street "+this.registerForm.get('address').value.street+
+     +" zip "+this.registerForm.get('address').value.zip.+
+     +" city "+this.registerForm.get('address').value.city);
    }
 
 }
