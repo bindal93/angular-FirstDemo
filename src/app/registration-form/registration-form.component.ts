@@ -23,11 +23,11 @@ registerForm: FormGroup;
   }
    testing(){
      debugger;
-     alert("inside testing :: "+
-     "firstName ::"+this.registerForm.get('firstName').value+
-     "lastName ::"+this.registerForm.get('lastName').value+
-     "address ::street "+this.registerForm.get('address').value.street+
-     +" zip "+this.registerForm.get('address').value.zip.+
+     alert("inside testing :: "
+     +"firstName ::"+this.registerForm.get('firstName').value
+     +"lastName ::"+this.registerForm.get('lastName').value
+     +"address ::street "+this.registerForm.get('address').value.street
+     +" zip "+this.registerForm.get('address').value.zip
      +" city "+this.registerForm.get('address').value.city);
    }
 
