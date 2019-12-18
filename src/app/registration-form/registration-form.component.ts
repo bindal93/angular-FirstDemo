@@ -24,7 +24,7 @@ registerForm: FormGroup;
   }
    testing(){
      debugger;
-     console.log("inside testing :: "this.registerForm.get('firstName'));
+     console.log("inside testing :: "+this.registerForm.get('firstName'));
    }
 
 }
