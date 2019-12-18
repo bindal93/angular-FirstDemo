@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
-
+import { ReactiveFormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello/hello.component";
 import { HelloComponent2 } from "./hello2.component";
@@ -11,9 +11,10 @@ import { AppCoursesListComponent } from "./app-courses-list/app-courses-list.com
 import { BookService } from "./book/book.service";
 import { HttpClientModule } from "@angular/common/http";
 import { BookComponent } from "./book/book.component";
+import { RegistrationFormComponent } from "./registration-form/registration-form.component";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   declarations: [
     AppComponent,
     HelloComponent,
@@ -21,7 +22,8 @@ import { BookComponent } from "./book/book.component";
     NgIfSimpleComponent,
     SalutationPipe,
     AppCoursesListComponent,
-    BookComponent
+    BookComponent,
+    RegistrationFormComponent
   ],
   bootstrap: [AppComponent],
   providers: [BookService]
