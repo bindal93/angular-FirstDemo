@@ -9,12 +9,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegistrationFormComponent implements OnInit {
 registerForm: FormGroup;
 
-  constructor(private formBuilder : FormBuilder) { }
-
+   constructor(private formBuilder: FormBuilder) { }
   ngOnInit() {
      this.registerForm = this.formBuilder.group({
-      firstName: ['',['Validators.required']],
-      lastName: ['', ['Validators.required']],
+      firstName: ['',[Validators.required]],
+      lastName: ['', [Validators.required]],
       address: this.formBuilder.group({
         street: [],
         zip: [],
@@ -24,7 +23,10 @@ registerForm: FormGroup;
   }
    testing(){
      debugger;
-     console.log("inside testing :: "+this.registerForm.get('firstName'));
+     console.log("inside testing :: "+
+     "firstName ::"+this.registerForm.get('firstName').value+
+     "lastName ::"+this.registerForm.get('lastName').value+
+     "address ::"+this.registerForm.get('address').value)
    }
 
 }
