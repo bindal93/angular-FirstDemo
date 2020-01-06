@@ -13,6 +13,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { BookComponent } from "./book/book.component";
 import { RegistrationFormComponent } from "./registration-form/registration-form.component";
 import { Routes, RouterModule } from "@angular/router";
+import { DatepickerComponent } from './datepicker/datepicker.component';
 
 
 const routes: Routes = [
@@ -38,7 +39,8 @@ const routes: Routes = [
     SalutationPipe,
     AppCoursesListComponent,
     BookComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    DatepickerComponent
   ],
   bootstrap: [AppComponent],
   providers: [BookService]
