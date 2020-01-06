@@ -11,5 +11,6 @@ export class DatepickerComponent implements OnInit {
 
   ngOnInit() {
   }
-
+minDate = new Date(2019, 11, 1);
+  maxDate = new Date(2020, 0, 1);
 }
